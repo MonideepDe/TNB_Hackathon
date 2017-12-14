@@ -1,0 +1,955 @@
+{
+    "_id": "st-90ee117f-4eb4-5c08-8b42-d4948cae2d3f",
+    "refId": "2f817a82-8ed1-5272-8e12-b1bc9fcc979e",
+    "notifyUserViaEmail": true,
+    "purpose": "customer",
+    "hasUserEndpoint": false,
+    "offKoraConfirmation": false,
+    "skipMakeEditLinks": false,
+    "enableMLNER": false,
+    "type": "taskbot",
+    "variables": [],
+    "showInMp": false,
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+        "en"
+    ],
+    "languagePreferences": {
+        "type": "lifeTime"
+    },
+    "confidenceConfigs": [
+        {
+            "mode": "ml",
+            "threshold": 0,
+            "minThreshold": 60,
+            "maxThreshold": 80,
+            "_id": "5a2e135405b7186e679e247b",
+            "isActive": true
+        },
+        {
+            "mode": "faq",
+            "threshold": 0,
+            "minThreshold": 60,
+            "maxThreshold": 80,
+            "_id": "5a2e135405b7186e679e247a",
+            "isActive": true
+        },
+        {
+            "mode": "cs",
+            "threshold": 0,
+            "minThreshold": 60,
+            "maxThreshold": 80,
+            "_id": "5a2e135405b7186e679e2479",
+            "isActive": true
+        }
+    ],
+    "interruptOptions": {
+        "interruptsEnabled": true,
+        "neverNotify": true,
+        "resumeUxOptions": "notify",
+        "discardUxOptions": "ignoreInterrupt",
+        "numTasksToHold": 1
+    },
+    "color": "#9D1850",
+    "sBannerColor": "#9D1850",
+    "bBannerColor": "#9D1850",
+    "categoryIds": [
+        "451902a073c071463e2fe7f6"
+    ],
+    "class": [],
+    "featured": false,
+    "sendVcf": false,
+    "isNLEnabled": true,
+    "interruptsEnabled": true,
+    "localeData": {
+        "en": {
+            "synonyms": {
+                "Meter": [
+                    "counter"
+                ],
+                "item": [
+                    "stock",
+                    "inventory",
+                    "item",
+                    "product"
+                ],
+                "rank": [
+                    "rating",
+                    "rate",
+                    "rank"
+                ],
+                "info": [
+                    "detail",
+                    "specific",
+                    "information",
+                    "info"
+                ],
+                "customer": [
+                    "customer",
+                    "client",
+                    "user"
+                ],
+                "recent": [
+                    "recent",
+                    "new"
+                ],
+                "top": [
+                    "top",
+                    "valuable",
+                    "best",
+                    "foremost",
+                    "peak"
+                ],
+                "post": [
+                    "post",
+                    "put",
+                    "place",
+                    "submit"
+                ],
+                "request": [
+                    "ask",
+                    "request"
+                ],
+                "pick": [
+                    "choose",
+                    "decide",
+                    "handpick",
+                    "pick",
+                    "prefer",
+                    "recommend",
+                    "select",
+                    "suggest"
+                ],
+                "comment": [
+                    "comment",
+                    "annotate",
+                    "describe"
+                ],
+                "list": [
+                    "enumerate",
+                    "list",
+                    "name",
+                    "tell"
+                ],
+                "get": [
+                    "find",
+                    "garner",
+                    "gather",
+                    "get",
+                    "grab",
+                    "obtain",
+                    "retrieve",
+                    "show",
+                    "display",
+                    "give"
+                ],
+                "delete": [
+                    "abolish",
+                    "annihilate",
+                    "delete",
+                    "demolish",
+                    "destroy",
+                    "efface",
+                    "erase",
+                    "eliminate",
+                    "obliterate"
+                ],
+                "add": [
+                    "insert",
+                    "append",
+                    "attach",
+                    "add"
+                ],
+                "alter": [
+                    "adjust",
+                    "alter",
+                    "amend",
+                    "renovate",
+                    "revise",
+                    "modify",
+                    "revamp",
+                    "reshape",
+                    "reconstruct",
+                    "recast",
+                    "change",
+                    "update"
+                ],
+                "create": [
+                    "new",
+                    "add",
+                    "assemble",
+                    "build",
+                    "compose",
+                    "construct",
+                    "contrive",
+                    "create",
+                    "design",
+                    "generate",
+                    "instantiate",
+                    "invent",
+                    "make",
+                    "manufacture",
+                    "produce",
+                    "synthesize",
+                    "synthetise",
+                    "synthetize",
+                    "write"
+                ],
+                "Reconnection": [
+                    "connect again"
+                ]
+            },
+            "errorCodes": {
+                "pollError": []
+            },
+            "description": "TNB",
+            "name": "TNB",
+            "keywords": [],
+            "userTaskListMsg": "Hi there! How can I help you today?"
+        }
+    },
+    "actions": [],
+    "alerts": [
+        {
+            "_id": "l-b040aa05-80ba-56b6-830e-e1cabb00b970",
+            "refId": "eda478b0-4a8c-5e48-85c9-dfa32b2e0527",
+            "type": "webservice",
+            "subtype": "rest",
+            "isReport": false,
+            "idp": "none",
+            "sso_type": "none",
+            "reminders": {
+                "options": [],
+                "enabled": false
+            },
+            "dataType": "text/plain",
+            "linksPath": "",
+            "ddStrategy": "None",
+            "ddEnabled": true,
+            "ddInitial": true,
+            "initPoll": true,
+            "initPostCount": 3,
+            "identifier": [],
+            "alertFieldsRequired": false,
+            "alertFieldsDefinition": [],
+            "hasUserEndpoint": false,
+            "requestChain": [
+                {
+                    "name": "GetOutage",
+                    "linkType": "apiObject",
+                    "linkDefinition": {
+                        "reqFields": [],
+                        "headerFields": [],
+                        "endPoint": {
+                            "host": "tcseia.eastus.cloudapp.azure.com",
+                            "port": "9001",
+                            "path": "/outageNow",
+                            "protocol": "http",
+                            "content-type": "application/json",
+                            "method": "GET",
+                            "connectorEnabled": false
+                        }
+                    }
+                }
+            ],
+            "initializer": [],
+            "sample": "[\"Kuala Lumpur\"]",
+            "repeatInterval": "*/5 * * * *",
+            "scheduleOptions": {
+                "time": [
+                    "Daily",
+                    "Weekday",
+                    "Weekend"
+                ],
+                "frequency": [
+                    "Every"
+                ],
+                "intervals": {
+                    "At": [],
+                    "Every": [
+                        "5 minutes"
+                    ]
+                },
+                "default": [
+                    "*/5 * * * *"
+                ]
+            },
+            "koreUxMap": {
+                "title": "<%  %>",
+                "body": "<%  %>"
+            },
+            "channelUxMap": [
+                {
+                    "body": "A new outage has been reported!",
+                    "isMarkdown": true,
+                    "channel": "default"
+                }
+            ],
+            "hasActions": true,
+            "linkPreviewKeys": [],
+            "offKoraConfirmation": false,
+            "handleReportAndActionLinks": true,
+            "localeData": {
+                "en": {
+                    "errorCodes": {
+                        "pollError": []
+                    },
+                    "ignoreWords": [],
+                    "name": "GetOutageAlerts",
+                    "label": "GetOutageAlerts",
+                    "shortDesc": "GetOutageAlerts",
+                    "upgradeShortMsg": "updated response message",
+                    "userAlertMsg": "You will now receive alert messages on any new outages",
+                    "keywords": []
+                }
+            },
+            "filters": []
+        }
+    ],
+    "dialogs": [
+        {
+            "_id": "dg-19e97a20-280e-59d5-b944-a64c6af67c97",
+            "refId": "22660829-a0d8-5533-b8c0-4ea1311de6f8",
+            "nodes": [
+                {
+                    "nodeId": "intent0",
+                    "type": "intent",
+                    "componentId": "dc-fc1d8477-2c0b-50d1-aad1-ed0a66c9068b",
+                    "transitions": [
+                        {
+                            "metadata": {
+                                "connId": "dummy0",
+                                "color": "#299d8e"
+                            },
+                            "default": "message1"
+                        }
+                    ],
+                    "metadata": {
+                        "left": 30,
+                        "top": 170
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "message1",
+                    "type": "message",
+                    "componentId": "dc-aca6bc05-3efc-55d6-bb83-be7387437e41",
+                    "transitions": [
+                        {
+                            "default": "entity3",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy1"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 332,
+                        "top": 170
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "entity3",
+                    "type": "entity",
+                    "componentId": "dc-bf8fd3b1-94cf-5109-9822-1cb6869d383e",
+                    "transitions": [
+                        {
+                            "default": "entity4",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy4"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 170,
+                        "left": 634
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "entity4",
+                    "type": "entity",
+                    "componentId": "dc-b177ced0-629d-54ae-ab2b-a5b8ae94a22c",
+                    "transitions": [
+                        {
+                            "default": "service5",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy6"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 344,
+                        "left": 620
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "service5",
+                    "type": "service",
+                    "componentId": "dc-84763177-5e72-501d-a63a-dec0dbb4a053",
+                    "transitions": [
+                        {
+                            "default": "message6",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy8"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 347,
+                        "left": 323
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "message6",
+                    "type": "message",
+                    "componentId": "dc-ece95979-ea78-533c-8062-9c93ebf485aa",
+                    "transitions": [
+                        {
+                            "metadata": {
+                                "connId": "dummy10",
+                                "color": "#299d8e"
+                            },
+                            "default": "end"
+                        }
+                    ],
+                    "metadata": {
+                        "top": 506,
+                        "left": 323
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                }
+            ],
+            "lname": "meterreconnection",
+            "isHidden": false,
+            "localeData": {
+                "en": {
+                    "shortDesc": "Ticket creation for meter reconnection",
+                    "name": "MeterReconnection"
+                }
+            }
+        },
+        {
+            "_id": "dg-b83134b6-b91a-5391-8f7c-4c939a2153cf",
+            "refId": "24bad45a-06dd-555c-963e-f8b18eca1a19",
+            "nodes": [
+                {
+                    "nodeId": "intent0",
+                    "type": "intent",
+                    "componentId": "dc-8e0088c0-5090-5772-8813-247b420a9439",
+                    "transitions": [
+                        {
+                            "default": "entity1",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy0"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 170,
+                        "left": 30
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "entity1",
+                    "type": "entity",
+                    "componentId": "dc-13daaf82-1857-57b2-a765-50bf3ddbdbdc",
+                    "transitions": [
+                        {
+                            "default": "service2",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy1"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 170,
+                        "left": 332
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "service2",
+                    "type": "service",
+                    "componentId": "dc-aede4861-8498-5eb7-a2b1-b1e20079e4d8",
+                    "transitions": [
+                        {
+                            "default": "message3",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy3"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "top": 170,
+                        "left": 634
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                },
+                {
+                    "nodeId": "message3",
+                    "type": "message",
+                    "componentId": "dc-680e5b34-8d37-5308-ac6f-a635680b0d77",
+                    "transitions": [
+                        {
+                            "metadata": {
+                                "connId": "dummy5",
+                                "color": "#299d8e"
+                            },
+                            "default": "end"
+                        }
+                    ],
+                    "metadata": {
+                        "top": 342,
+                        "left": 635
+                    },
+                    "nodeOptions": {
+                        "transitionType": "auto"
+                    }
+                }
+            ],
+            "lname": "outagenow",
+            "isHidden": false,
+            "localeData": {
+                "en": {
+                    "shortDesc": "Info on outage now",
+                    "name": "OutageNow"
+                }
+            }
+        }
+    ],
+    "dialogComponents": [
+        {
+            "_id": "dc-13daaf82-1857-57b2-a765-50bf3ddbdbdc",
+            "refId": "72c6c2aa-4140-5577-9c4b-1f7441676065",
+            "name": "AreaName",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "city",
+            "message": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Please%20provide%20the%20area%20you%20are%20referring%20to%3F"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I'm sorry, I am unable to recognize your entry as a city. Please enter the name of the city you would like to use."
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-680e5b34-8d37-5308-ac6f-a635680b0d77",
+            "refId": "e4f73709-ddd8-5791-af48-ea4b7610bf49",
+            "name": "OutageResponse",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "type": "uxmap",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "if%20(context.OutageNowCall.response.body.length%20%3D%3D%3D%200)%20%7B%0A%20%20%20%20print(%22We%20are%20happy%20to%20report%20that%20there%20are%20no%20reported%20outages%20yet%22)%3B%0A%7D%20else%20%7B%0A%20%20%20%20if%20(context.OutageNowCall.response.body.indexOf(context.entities.AreaName)%20!%3D%20-1)%20%7B%0A%20%20%20%20%20%20%20%20print(%22We%20have%20an%20outage%20reported%20for%20the%20area%20and%20our%20engineers%20are%20working%20to%20resolve%20it.%20We%20apologize%20for%20the%20inconvinience%22)%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20print(%22We%20are%20happy%20to%20report%20that%20there%20are%20no%20outages%20in%20the%20mentioned%20area%22)%3B%0A%20%20%20%20%7D%0A%7D"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-84763177-5e72-501d-a63a-dec0dbb4a053",
+            "refId": "84f1b6f9-7880-5aec-87d1-12dd449d66ac",
+            "name": "MeterReconnTicketCreation",
+            "endPoint": {
+                "host": "dev31903.service-now.com",
+                "port": "",
+                "path": "/api/now/table/incident",
+                "protocol": "https",
+                "method": "post",
+                "connectorEnabled": false
+            },
+            "authRequired": true,
+            "payload": {
+                "type": "raw",
+                "value": "%7B%0A%20%20%22short_description%22%3A%22Please%20reconnect%20meter%20for%20account%20number%3A%20%7B%7Bcontext.entities.AccountNum%7D%7D.%20Phone%20number%20is%3A%20%7B%7Bcontext.entities.phoneNum%7D%7D%22%2C%0A%20%20%22caller_id%22%3A%22tnb.bot%22%0A%7D"
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Content-Type\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "ServiceNow_TNB_Auth",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":201,\"body\":{\"result\":{\"parent\":\"\",\"made_sla\":\"true\",\"caused_by\":\"\",\"watch_list\":\"\",\"upon_reject\":\"cancel\",\"sys_updated_on\":\"2017-12-14 06:06:05\",\"child_incidents\":\"0\",\"hold_reason\":\"\",\"approval_history\":\"\",\"number\":\"INC0010006\",\"resolved_by\":\"\",\"sys_updated_by\":\"admin\",\"opened_by\":{\"link\":\"https://dev31903.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441\",\"value\":\"6816f79cc0a8016401c5a33be04be441\"},\"user_input\":\"\",\"sys_created_on\":\"2017-12-14 06:06:05\",\"sys_domain\":{\"link\":\"https://dev31903.service-now.com/api/now/table/sys_user_group/global\",\"value\":\"global\"},\"state\":\"1\",\"sys_created_by\":\"admin\",\"knowledge\":\"false\",\"order\":\"\",\"calendar_stc\":\"\",\"closed_at\":\"\",\"cmdb_ci\":\"\",\"delivery_plan\":\"\",\"impact\":\"3\",\"active\":\"true\",\"work_notes_list\":\"\",\"business_service\":\"\",\"priority\":\"5\",\"sys_domain_path\":\"/\",\"rfc\":\"\",\"time_worked\":\"\",\"expected_start\":\"\",\"opened_at\":\"2017-12-14 06:06:04\",\"business_duration\":\"\",\"group_list\":\"\",\"work_end\":\"\",\"caller_id\":{\"link\":\"https://dev31903.service-now.com/api/now/table/sys_user/b00094550f030300838bcdbce1050e9c\",\"value\":\"b00094550f030300838bcdbce1050e9c\"},\"reopened_time\":\"\",\"resolved_at\":\"\",\"approval_set\":\"\",\"subcategory\":\"\",\"work_notes\":\"\",\"short_description\":\"Please reconnect meter for account number: 3123123. Phone number is: 1432321\",\"close_code\":\"\",\"correlation_display\":\"\",\"delivery_task\":\"\",\"work_start\":\"\",\"assignment_group\":\"\",\"additional_assignee_list\":\"\",\"business_stc\":\"\",\"description\":\"\",\"calendar_duration\":\"\",\"close_notes\":\"\",\"notify\":\"1\",\"sys_class_name\":\"incident\",\"closed_by\":\"\",\"follow_up\":\"\",\"parent_incident\":\"\",\"sys_id\":\"a960f4550f430300838bcdbce1050e8c\",\"contact_type\":\"\",\"reopened_by\":\"\",\"incident_state\":\"1\",\"urgency\":\"3\",\"problem_id\":\"\",\"company\":\"\",\"reassignment_count\":\"0\",\"activity_due\":\"\",\"assigned_to\":\"\",\"severity\":\"3\",\"comments\":\"\",\"approval\":\"not requested\",\"sla_due\":\"\",\"comments_and_work_notes\":\"\",\"due_date\":\"\",\"sys_mod_count\":\"0\",\"reopen_count\":\"0\",\"sys_tags\":\"\",\"escalation\":\"0\",\"upon_approval\":\"proceed\",\"correlation_id\":\"\",\"location\":\"\",\"category\":\"inquiry\"}},\"headers\":{\"set-cookie\":[\"JSESSIONID=2443CFB6FDAD1D67519E282FA965969F;Secure; Path=/; HttpOnly\",\"glide_user=\\\"\\\";Secure; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly\",\"glide_user_session=\\\"\\\";Secure; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly\",\"glide_user_route=glide.58df316f859001229dbac1eede206ed6;Secure; Expires=Tue, 01-Jan-2086 09:20:11 GMT; Path=/; HttpOnly\",\"glide_session_store=6D6074550F430300838BCDBCE1050E38;Secure; Expires=Thu, 14-Dec-2017 06:36:04 GMT; Path=/; HttpOnly\",\"BIGipServerpool_dev31903=1166050314.39232.0000; path=/\"],\"content-encoding\":\"gzip\",\"x-is-logged-in\":\"true\",\"x-transaction-id\":\"656074550f43\",\"location\":\"https://dev31903.service-now.com/api/now/table/incident/a960f4550f430300838bcdbce1050e8c\",\"pragma\":\"no-store,no-cache\",\"cache-control\":\"no-cache,no-store,must-revalidate,max-age=-1\",\"expires\":\"0\",\"content-type\":\"application/json;charset=UTF-8\",\"transfer-encoding\":\"chunked\",\"date\":\"Thu, 14 Dec 2017 06:06:04 GMT\",\"server\":\"ServiceNow\",\"strict-transport-security\":\"max-age=63072000; includeSubDomains\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-8e0088c0-5090-5772-8813-247b420a9439",
+            "refId": "8d4285ce-abce-5253-a15d-bd3705e8851d",
+            "name": "OutageNow",
+            "serviceNodeType": "custom",
+            "type": "intent",
+            "applyDefaultTemplate": false,
+            "dialogId": "dg-b83134b6-b91a-5391-8f7c-4c939a2153cf",
+            "localeData": {
+                "en": {
+                    "intent": "OutageNow",
+                    "desc": "Info on outage now"
+                }
+            }
+        },
+        {
+            "_id": "dc-aca6bc05-3efc-55d6-bb83-be7387437e41",
+            "refId": "c29445c7-d999-55f4-a156-15d3ec0c9580",
+            "name": "BotAcknowlegement",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I%20will%20be%20happy%20to%20assist%20you%20with%20this!%20But%2C%20let%20me%20first%20collect%20a%20few%20details%20from%20you."
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-aede4861-8498-5eb7-a2b1-b1e20079e4d8",
+            "refId": "a9dbfaef-402d-55ca-b724-df5e590a8a81",
+            "name": "OutageNowCall",
+            "endPoint": {
+                "host": "tcseia.eastus.cloudapp.azure.com",
+                "port": "9001",
+                "path": "/outageNow",
+                "protocol": "http",
+                "method": "get",
+                "connectorEnabled": false
+            },
+            "authRequired": false,
+            "payload": {
+                "type": "raw",
+                "value": ""
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Accept\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "none",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":200,\"body\":[\"Kuala Lumpur\",\"Shah Alam\"],\"headers\":{\"x-application-context\":\"application:9001\",\"content-type\":\"application/json;charset=UTF-8\",\"transfer-encoding\":\"chunked\",\"connection\":\"keep-alive\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-b177ced0-629d-54ae-ab2b-a5b8ae94a22c",
+            "refId": "bfc171e5-b49c-573d-987d-6a192916a769",
+            "name": "PhoneNum",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "phone_number",
+            "message": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Please%20provide%20your%20registered%20phone%20number"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I apologize, I am unable to recognize the phone number you entered. Please enter the phone number including the area code."
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-bf8fd3b1-94cf-5109-9822-1cb6869d383e",
+            "refId": "0f13bb31-e9c2-598f-bfae-6fa095511aff",
+            "name": "AccountNum",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "label",
+            "message": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Please%20provide%20your%20account%20number"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "type": "basic",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I'm sorry, I am unable to recognize the string. Please enter again."
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-ece95979-ea78-533c-8062-9c93ebf485aa",
+            "refId": "2a56360c-a084-5d3a-b0ca-0d937a43885c",
+            "name": "FinalMeterReconnectionResponse",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "type": "uxmap",
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "print('I%20have%20created%20an%20Incident%20-%20%7B%7Bcontext.MeterReconnTicketCreation.response.body.result.number%7D%7D%20for%20you.%20%20A%20technician%20will%20be%20fixing%20the%20issue%20soon')%3B"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false
+        },
+        {
+            "_id": "dc-fc1d8477-2c0b-50d1-aad1-ed0a66c9068b",
+            "refId": "5277b9dc-51c5-50f1-bcba-2e96636eb616",
+            "name": "MeterReconnection",
+            "serviceNodeType": "custom",
+            "type": "intent",
+            "applyDefaultTemplate": false,
+            "dialogId": "dg-19e97a20-280e-59d5-b944-a64c6af67c97",
+            "localeData": {
+                "en": {
+                    "intent": "MeterReconnection",
+                    "desc": "Ticket creation for meter reconnection"
+                }
+            }
+        }
+    ],
+    "knowledgeTasks": [
+        {
+            "refId": "361b2c56-e220-5954-bd06-2484845735c6",
+            "name": "TNB",
+            "description": "this is used to make ontology",
+            "isGraph": true,
+            "taxonomy": [
+                {
+                    "nodeId": "b20102b9-2f6c-4dfd-9fc1-5756a8847cf2",
+                    "label": "TNB",
+                    "level": "l0",
+                    "isDummy": false,
+                    "synonyms": [],
+                    "parent": []
+                }
+            ],
+            "metadata": {
+                "taxonomy": [
+                    {
+                        "nodes": [],
+                        "synonyms": [],
+                        "parent": [],
+                        "level": "l0",
+                        "class": "bgblack",
+                        "label": "TNB",
+                        "nodeId": "b20102b9-2f6c-4dfd-9fc1-5756a8847cf2"
+                    }
+                ]
+            },
+            "language": "en",
+            "faqs": {
+                "faqs": [
+                    {
+                        "question": "Where is the TNB's Headquarters?",
+                        "answer": "%20Kuala%20Lumpur.%20For%20full%20address%20%20refer%20to%20our%20%5BContact%20Us%5D(https%3A%2F%2Fwww.tnb.com.my%2Fcontact-us%2F)%20page.%20",
+                        "terms": [
+                            "TNB"
+                        ],
+                        "alternateQuestions": []
+                    },
+                    {
+                        "question": "Where can I find a list of TNB's subsidiaries?",
+                        "answer": "%20A%20complete%20list%20can%20be%20found%20at%20our%20Subsidiaries%20page.%0D%0A",
+                        "terms": [
+                            "TNB"
+                        ],
+                        "alternateQuestions": []
+                    },
+                    {
+                        "question": "What are TNB's activities on corporate governance community involvement and environment?",
+                        "answer": "TNB%20is%20committed%20to%20contributing%20to%20sustainable%20development.%20An%20active%20environmental%20policy%20is%20part%20of%20the%20financial%20Group's%20responsibility%20toward%20future%20generations.%20For%20more%20information%22%0D%0A",
+                        "terms": [
+                            "TNB"
+                        ],
+                        "alternateQuestions": []
+                    },
+                    {
+                        "question": "What is TNB's fiscal year?",
+                        "answer": "TNB's%20fiscal%20year%20is%20from%201%20September%20to%2031%20August.",
+                        "terms": [
+                            "TNB"
+                        ],
+                        "alternateQuestions": []
+                    },
+                    {
+                        "question": "Can deposits be used to settle a bill in arrears?",
+                        "answer": "%20Yes.%20This%20can%20be%20done%20during%20closure%20of%20accounts.%20However%20if%20the%20deposit%20amount%20is%20insufficient%20customers%20will%20have%20to%20pay%20the%20balance%20of%20the%20arrears.%20https%3A%2F%2Fwww.tnb.com.my%2Ffaq%2Faccount-billing%0D%0A",
+                        "terms": [
+                            "TNB"
+                        ],
+                        "alternateQuestions": []
+                    }
+                ],
+                "synonyms": {},
+                "classes": {}
+            }
+        }
+    ],
+    "paramMaps": [],
+    "taskDgParamMaps": [],
+    "idpConfigurations": [
+        {
+            "_id": "ap-7ff1b2a3-734c-59b5-ba58-ea9d20b53501",
+            "refId": "e8063363-d6bb-5f36-9ec8-fc046bc8b367",
+            "name": "ServiceNow_TNB_Auth",
+            "connectorEnabled": false,
+            "hasTenancy": false,
+            "sso_type": "basic",
+            "authCheckUrl": "https://dev31903.service-now.com/api/now/table/incident?sysparm_limit=1",
+            "fields": [
+                {
+                    "type": "header",
+                    "key": "Authorization",
+                    "value": "Basic {{passphrase}}"
+                }
+            ],
+            "formfields": [
+                {
+                    "key": "username",
+                    "fieldType": "textbox",
+                    "isRequired": true,
+                    "default": "admin",
+                    "localeData": {
+                        "en": {
+                            "title": "Username or email"
+                        }
+                    },
+                    "visibility": "hidden",
+                    "type": "string"
+                },
+                {
+                    "key": "password",
+                    "fieldType": "password",
+                    "isRequired": true,
+                    "default": "MSn@2017",
+                    "localeData": {
+                        "en": {
+                            "title": "Password"
+                        }
+                    },
+                    "visibility": "hidden",
+                    "type": "string"
+                }
+            ],
+            "headerFields": [],
+            "payloadFields": [],
+            "appConfig": {
+                "baseURL": ""
+            },
+            "description": "https://dev31903.service-now.com/api/now/table/incident?sysparm_limit=1"
+        }
+    ],
+    "sentences": [
+        {
+            "taskId": "dc-8e0088c0-5090-5772-8813-247b420a9439",
+            "type": "DialogIntent",
+            "sentence": "Is there are outage going on?",
+            "entities": [],
+            "language": "en"
+        },
+        {
+            "taskId": "dc-fc1d8477-2c0b-50d1-aad1-ed0a66c9068b",
+            "type": "DialogIntent",
+            "sentence": "Please re-connect my meter",
+            "entities": [],
+            "language": "en"
+        },
+        {
+            "taskId": "dc-fc1d8477-2c0b-50d1-aad1-ed0a66c9068b",
+            "type": "DialogIntent",
+            "sentence": "connect my meter again",
+            "entities": [],
+            "language": "en"
+        }
+    ],
+    "koraResponses": []
+}
